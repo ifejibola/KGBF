@@ -5,8 +5,9 @@ import Shop from './pages/Shop';
 import SinglePage from './pages/SinglePage';
 import NewProductPage from './component/newProduct';
 import CheckOutPage from './pages/CheckOutPage';
-
+import Pricing from './component/Pricing';
 import All from './pages/AllProducts';
+
 
 import option from './pages/Option2';
 import Stripe from './pages/Stripe';
@@ -45,6 +46,10 @@ export default [
             {
                 ...NewProductPage,
                 path: '/new',
+            },
+            {
+                ...Pricing,
+                path: '/price',
             },
             {
                 ...CheckOutPage,

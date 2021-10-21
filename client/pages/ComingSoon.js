@@ -45,7 +45,8 @@ function ComingSoon() {
                 <div className="background background-overlay text-black" >
                     <video playsInline autoPlay loop muted data-video>
 
-                        <source src="videos/flash.mp4" type="video/mp4" />
+                        {/* <source src="videos/flash.mp4" type="video/mp4" /> */}
+                        {/* <source src="https://vimeo.com/637288061" type="video/mp4" /> */}
                         {/* <source src="https://www.pexels.com/video/a-man-displaying-his-speed-in-punching-4761713/" type="video/mp4" /> */}
                         {/* <source src="videos/video-3.mp4" type="video/mp4" /> */}
                         {/* <source src="/video/video-3.mp4" type="video/mp4" /> */}
@@ -330,7 +331,7 @@ function ComingSoon() {
                                 </div>
                             </Link>
                         </div>
-                        {InstagramImages.map((data, i) => {
+                        {/* {InstagramImages.map((data, i) => {
                             console.log('igimgs', data.image)
                             return (
                                 < div className="col-lg-3" key={i} >
@@ -338,18 +339,13 @@ function ComingSoon() {
                                         <div className="card-wrap">
                                             <Instagram ig={data.image} />
 
-                                            {/* <div className="card-header pb-0">
-                                        <i className="bi bi-instagram fs-3"></i>
-                                    </div> */}
-                                            {/* <div className="card-footer mt-auto">
-                                        <h5 className="fs-lg">@kingdomsfitnessboxing</h5>
-                                    </div> */}
+
                                         </div>
                                     </div>
                                 </div>
 
                             )
-                        })}
+                        })} */}
                         {/* <div className="col-lg-3">
                             <Link to="#" className="card card-arrow card-hover-arrow equal-lg-1-1 text-white bg-black">
                                 <div className="card-wrap">
@@ -376,20 +372,20 @@ function ComingSoon() {
                         <div className="col-lg-6 text-center mb-8">
                             <span className="badge bg-opaque-primary text-primary mb-2 rounded-pill">Pricing Plans</span>
                             <h2 className="fw-bold">Get started with BOXING</h2>
-                            <p className="text-secondary">Incidunt sunt optio aspernatur provident molestias! Vero quidem nihil temporibus,
-                                assumenda dolor voluptates dolorem tempore voluptas, reprehenderit velit eius ullam error esse.</p>
+                            <p className="text-secondary">Choose an option that fits your need, Boxing, Personal Training, Childrens Boxing</p>
                         </div>
                     </div>
                     <div className="row g-3 g-xl-5 align-items-end">
                         <div className="col-md-6 col-lg-4" data-aos="fade-up">
                             <div className="card border border-primary text-center">
                                 <div className="card-body bg-primary inverted">
-                                    <span className="fs-lg text-white">One Day</span>
-                                    <h2 className="h1 my-2">$9</h2>
+                                    <span className="fs-lg text-white">Personal Training</span>
+                                    <p className="fs-lg text-white">starting at</p>
+                                    <h2 className="h1 my-2">$</h2>
                                     <p className="text-secondary fs-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                     <div className="d-grid mt-5">
                                         <Link to="https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/"
-                                            className="btn btn-white btn-lg rounded-pill">Buy Now</Link>
+                                            className="btn btn-white btn-lg rounded-pill">Contact</Link>
                                     </div>
                                 </div>
                             </div>
@@ -402,7 +398,7 @@ function ComingSoon() {
                                     <p className="text-secondary fs-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                     <div className="d-grid mt-5">
                                         <Link to="https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/"
-                                            className="btn btn-outline-primary btn-lg rounded-pill">Buy Now</Link>
+                                            className="btn btn-outline-primary btn-lg rounded-pill">Contact</Link>
                                     </div>
                                 </div>
                             </div>
@@ -415,7 +411,7 @@ function ComingSoon() {
                                     <p className="text-secondary fs-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                     <div className="d-grid mt-5">
                                         <Link to="https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/"
-                                            className="btn btn-outline-primary btn-lg rounded-pill">Buy Now</Link>
+                                            className="btn btn-outline-primary btn-lg rounded-pill">Contact</Link>
                                     </div>
                                 </div>
                             </div>

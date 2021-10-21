@@ -17,8 +17,7 @@ function Menu() {
 
     const location = useLocation();
     const history = useHistory();
-    console.log(history.location.pathname)
-    console.log(history.location.state)
+
     console.log('locationnn: ', location)
 
     const [items,
@@ -39,36 +38,7 @@ function Menu() {
 
     const [cartItems, setCartItems] = useState(getCart());
     const [totalCartItem, setTotalItems] = useState(totalCartItems());
-    // const [cartTotal, setCartTotal] = useState(calcTotalItems());
 
-    useEffect(() => {
-        // const preTax = calcPreTaxCost()
-        // const tax$ = calculateTax(preTax).subscribe(
-
-        // )
-        // console.log('check', calcTotalCost())
-
-        // console.log('tax!', tax)
-        // console.log('cartItems state changed!')
-        // console.log('object:  ', calcTotalItems())
-
-
-
-    }, [cartItems]);
-    // console.log('check3', totalItemCost)
-    // console.log('check', calcTotalCost())
-
-
-    useEffect(() => {
-        // const preTax = calcPreTaxCost()
-        // const tax$ = calculateTax(preTax).subscribe(
-
-        // )
-        // console.log('totalCartItem state changed!')
-        // console.log('toalItems: ', totalCartItem);
-        // console.log('object:  ', calcTotalItems())
-
-    }, [totalCartItem]);
 
     const handleChange = index => e => {
         let updatedCart = cartItems;
@@ -97,8 +67,7 @@ function Menu() {
             applied: true
         }
     };
-    // console.log('cartitems: ', cartItems);
-    // console.log('object', calcTotalItems())
+
     return (
         <>
             <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasCart" aria-labelledby="offcanvasCart">
@@ -139,48 +108,6 @@ function Menu() {
 
                             })
                         }
-                        {/* <li className="mt-4">
-                            <div className="row g-2 g-lg-3 align-items-center">
-                                <a href="" className="col-3"><img className="img-fluid" src="/images/products/product-2.jpg"
-                                    alt="Product" /></a>
-                                <div className="col">
-                                    <a href="" className="text-black text-primary-hover lead">Bluetooth Speaker</a>
-                                    <ul className="list-inline text-muted">
-                                        <li className="list-inline-item">Price: <span className="text-secondary">$90</span></li>
-                                        <li className="list-inline-item">Color: <span className="text-secondary">Blue</span></li>
-                                        <li className="list-inline-item">Qty:
-                                            <div className="counter text-secondary" data-counter="qty-1">
-                                                <span className="counter-minus bi bi-dash"></span>
-                                                <input type="number" name="qty-1" className="counter-value" min="0" max="10" />
-                                                <span className="counter-plus bi bi-plus"></span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <a href="" className="text-red underline">Remove</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="mt-4">
-                            <div className="row g-2 g-lg-3 align-items-center">
-                                <a href="" className="col-3"><img className="img-fluid" src="/images/products/product-3.jpg"
-                                    alt="Product" /></a>
-                                <div className="col">
-                                    <a href="" className="text-black text-primary-hover lead">Bluetooth Speaker</a>
-                                    <ul className="list-inline text-muted">
-                                        <li className="list-inline-item">Price: <span className="text-secondary">$90</span></li>
-                                        <li className="list-inline-item">Color: <span className="text-secondary">Blue</span></li>
-                                        <li className="list-inline-item">Qty:
-                                            <div className="counter text-secondary" data-counter="qty-1">
-                                                <span className="counter-minus bi bi-dash"></span>
-                                                <input type="number" name="qty-1" className="counter-value" min="0" max="10" />
-                                                <span className="counter-plus bi bi-plus"></span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <a href="" className="text-red underline">Remove</a>
-                                </div>
-                            </div>
-                        </li> */}
                     </ul>
                 </div>
                 <div className="offcanvas-footer">

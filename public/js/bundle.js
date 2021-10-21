@@ -6719,10 +6719,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_SinglePage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/SinglePage */ "./client/pages/SinglePage.js");
 /* harmony import */ var _component_newProduct__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/newProduct */ "./client/component/newProduct.js");
 /* harmony import */ var _pages_CheckOutPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/CheckOutPage */ "./client/pages/CheckOutPage.js");
-/* harmony import */ var _pages_AllProducts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/AllProducts */ "./client/pages/AllProducts.js");
-/* harmony import */ var _pages_Option2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/Option2 */ "./client/pages/Option2.js");
-/* harmony import */ var _pages_Stripe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/Stripe */ "./client/pages/Stripe.js");
-/* harmony import */ var _pages_NotFoundPage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/NotFoundPage */ "./client/pages/NotFoundPage.js");
+/* harmony import */ var _component_Pricing__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./component/Pricing */ "./client/component/Pricing.js");
+/* harmony import */ var _pages_AllProducts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/AllProducts */ "./client/pages/AllProducts.js");
+/* harmony import */ var _pages_Option2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/Option2 */ "./client/pages/Option2.js");
+/* harmony import */ var _pages_Stripe__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/Stripe */ "./client/pages/Stripe.js");
+/* harmony import */ var _pages_NotFoundPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/NotFoundPage */ "./client/pages/NotFoundPage.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -6752,25 +6753,28 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 
 
+
 const _default = [{ ..._App__WEBPACK_IMPORTED_MODULE_0__.default,
   routes: [{ ..._pages_ComingSoon__WEBPACK_IMPORTED_MODULE_1__.default,
     path: '/',
     exact: true
-  }, { ..._pages_Option2__WEBPACK_IMPORTED_MODULE_7__.default,
+  }, { ..._pages_Option2__WEBPACK_IMPORTED_MODULE_8__.default,
     path: '/home'
-  }, { ..._pages_AllProducts__WEBPACK_IMPORTED_MODULE_6__.default,
+  }, { ..._pages_AllProducts__WEBPACK_IMPORTED_MODULE_7__.default,
     path: '/all'
   }, { ..._pages_Shop__WEBPACK_IMPORTED_MODULE_2__.default,
     path: '/shop'
   }, { ..._pages_SinglePage__WEBPACK_IMPORTED_MODULE_3__.default,
     path: '/product/:id'
-  }, { ..._pages_Stripe__WEBPACK_IMPORTED_MODULE_8__.default,
+  }, { ..._pages_Stripe__WEBPACK_IMPORTED_MODULE_9__.default,
     path: '/checkout'
   }, { ..._component_newProduct__WEBPACK_IMPORTED_MODULE_4__.default,
     path: '/new'
+  }, { ..._component_Pricing__WEBPACK_IMPORTED_MODULE_6__.default,
+    path: '/price'
   }, { ..._pages_CheckOutPage__WEBPACK_IMPORTED_MODULE_5__.default,
     path: '/checkoutpage'
-  }, { ..._pages_NotFoundPage__WEBPACK_IMPORTED_MODULE_9__.default
+  }, { ..._pages_NotFoundPage__WEBPACK_IMPORTED_MODULE_10__.default
   }]
 }];
 const _default2 = _default;
@@ -8089,6 +8093,249 @@ const _default2 = _default;
   reactHotLoader.register(Instagram, "Instagram", "/Users/ife/kingdomBoxing/client/component/Instagram.js");
   reactHotLoader.register(_default, "_default", "/Users/ife/kingdomBoxing/client/component/Instagram.js");
   reactHotLoader.register(_default2, "default", "/Users/ife/kingdomBoxing/client/component/Instagram.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+
+/***/ }),
+
+/***/ "./client/component/Pricing.js":
+/*!*************************************!*\
+  !*** ./client/component/Pricing.js ***!
+  \*************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* module decorator */ module = __webpack_require__.hmd(module);
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+
+
+function Pricing() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    class: "py-15 py-xl-20"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "container mt-10"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "row justify-content-center mb-10"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "col-lg-8 text-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    class: "mb-2"
+  }, "Get started with Boxing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "fs-lg text-secondary"
+  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint saepe, quae esse accusantium unde, quidem eius officia incidunt, deserunt veritatis molestias et voluptates?"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "row g-3 g-xl-5 align-items-end"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "col-lg-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card border bg-primary inverted"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    class: "h1 mb-4"
+  }, "$49"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "text-muted mb-4"
+  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    class: "list-unstyled mb-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    class: "py-1"
+  }, "6 Premium accounts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    class: "py-1"
+  }, "Ad-free usic listening"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    class: "py-1"
+  }, "Listen to music ad-free")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "d-grid"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
+    class: "btn btn-outline-white btn-lg rounded-pill btn-with-icon"
+  }, "Buy Now ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    class: "bi bi-arrow-right"
+  })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "col-md-6 col-lg-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card border"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    class: "h1 mb-4"
+  }, "$149"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "text-muted mb-4"
+  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    class: "list-unstyled mb-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    class: "py-1"
+  }, "6 Premium accounts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    class: "py-1"
+  }, "Ad-free usic listening"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    class: "py-1"
+  }, "Listen to music ad-free")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "d-grid"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
+    class: "btn btn-outline-primary btn-lg rounded-pill btn-with-icon"
+  }, "Buy Now ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    class: "bi bi-arrow-right"
+  })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "col-md-6 col-lg-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card border"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    class: "h1 mb-4"
+  }, "$449"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "text-muted mb-4"
+  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    class: "list-unstyled mb-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    class: "py-1"
+  }, "6 Premium accounts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    class: "py-1"
+  }, "Ad-free usic listening"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    class: "py-1"
+  }, "Listen to music ad-free")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "d-grid"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
+    class: "btn btn-outline-primary btn-lg rounded-pill btn-with-icon"
+  }, "Buy Now ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    class: "bi bi-arrow-right"
+  }))))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+    class: "py-15 py-xl-20 border-top"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "row align-items-center justify-content-between"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "col-xl-5 mb-5 mb-xl-0"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    class: "mb-2"
+  }, "What users think about Cube?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "",
+    class: "underline action"
+  }, "Write a review ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    class: "bi bi-arrow-right"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "col-xl-7"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "row g-2",
+    "data-masonry": true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "col-md-6"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card bg-light"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    class: "bi bi-twitter fs-5"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "fs-lg text-secondary my-4"
+  }, "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias quam ipsa dolorem et, consequatur ipsum"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "lh-1 fs-lg"
+  }, "Michael Doe")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "col-md-6"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card bg-light"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    class: "bi bi-twitter fs-5"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "fs-lg text-secondary my-4"
+  }, "Lorem ipsum dolor, sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "lh-1 fs-lg"
+  }, "Michael Doe")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "col-md-6"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card bg-light"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    class: "bi bi-bootstrap-fill fs-5"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "fs-lg text-secondary my-4"
+  }, "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias quam ipsa dolorem et, consequatur ipsum"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "lh-1 fs-lg"
+  }, "Michael Doe")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "col-md-6"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card bg-light"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    class: "bi bi-twitter fs-5"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "fs-lg text-secondary my-4"
+  }, "Lorem ipsum dolor, sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    class: "lh-1 fs-lg"
+  }, "Michael Doe"))))))))));
+}
+
+const _default = {
+  component: Pricing
+};
+const _default2 = _default;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_default2);
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(Pricing, "Pricing", "/Users/ife/kingdomBoxing/client/component/Pricing.js");
+  reactHotLoader.register(_default, "default", "/Users/ife/kingdomBoxing/client/component/Pricing.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__signature__, "__signature__", "/Users/ife/kingdomBoxing/client/component/Pricing.js");
+  reactHotLoader.register(Pricing, "Pricing", "/Users/ife/kingdomBoxing/client/component/Pricing.js");
+  reactHotLoader.register(_default, "_default", "/Users/ife/kingdomBoxing/client/component/Pricing.js");
+  reactHotLoader.register(_default2, "default", "/Users/ife/kingdomBoxing/client/component/Pricing.js");
 })();
 
 ;
@@ -9948,10 +10195,7 @@ function ComingSoon() {
     loop: true,
     muted: true,
     "data-video": true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("source", {
-    src: "videos/flash.mp4",
-    type: "video/mp4"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "scroll-down"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: "py-15 py-xl-20 overflow-hidden"
@@ -10262,20 +10506,7 @@ function ComingSoon() {
     className: "card-footer mt-auto"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
     className: "fs-lg"
-  }, "@kingdomsfitnessboxing"))))), InstagramImages.map((data, i) => {
-    console.log('igimgs', data.image);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "col-lg-3",
-      key: i
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      to: "#",
-      className: "card card-arrow card-hover-arrow equal-lg-1-1 text-white bg-black"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "card-wrap"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_component_Instagram__WEBPACK_IMPORTED_MODULE_1__.default, {
-      ig: data.image
-    }))));
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  }, "@kingdomsfitnessboxing")))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: "py-15 py-xl-20"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "container"
@@ -10289,7 +10520,7 @@ function ComingSoon() {
     className: "fw-bold"
   }, "Get started with BOXING"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "text-secondary"
-  }, "Incidunt sunt optio aspernatur provident molestias! Vero quidem nihil temporibus, assumenda dolor voluptates dolorem tempore voluptas, reprehenderit velit eius ullam error esse."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Choose an option that fits your need, Boxing, Personal Training, Childrens Boxing"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "row g-3 g-xl-5 align-items-end"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "col-md-6 col-lg-4",
@@ -10300,16 +10531,18 @@ function ComingSoon() {
     className: "card-body bg-primary inverted"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "fs-lg text-white"
-  }, "One Day"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+  }, "Personal Training"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "fs-lg text-white"
+  }, "starting at"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     className: "h1 my-2"
-  }, "$9"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }, "$"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "text-secondary fs-lg"
   }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "d-grid mt-5"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
     className: "btn btn-white btn-lg rounded-pill"
-  }, "Buy Now"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "col-md-6 col-lg-4",
     "data-aos": "fade-up",
     "data-aos-delay": "100"
@@ -10328,7 +10561,7 @@ function ComingSoon() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
     className: "btn btn-outline-primary btn-lg rounded-pill"
-  }, "Buy Now"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "col-md-6 col-lg-4",
     "data-aos": "fade-up",
     "data-aos-delay": "200"
@@ -10347,7 +10580,7 @@ function ComingSoon() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
     className: "btn btn-outline-primary btn-lg rounded-pill"
-  }, "Buy Now")))))))));
+  }, "Contact")))))))));
 }
 
 __signature__(ComingSoon, "useEffect{}");
@@ -10470,31 +10703,11 @@ const initialItems = [{
 function Menu() {
   const location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useLocation)();
   const history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useHistory)();
-  console.log(history.location.pathname);
-  console.log(history.location.state);
   console.log('locationnn: ', location);
   const [items, totalItems, totalItemCost, tax, addOne, getCart, updateCart, removeItem, totalCartItems, calcTotalCost, // calcTotalItems,
   deleteCartItem, setCheckOut, empty] = (0,_Hooks_Cart_Helper__WEBPACK_IMPORTED_MODULE_1__.useCart)(initialItems);
   const [cartItems, setCartItems] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(getCart());
-  const [totalCartItem, setTotalItems] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(totalCartItems()); // const [cartTotal, setCartTotal] = useState(calcTotalItems());
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {// const preTax = calcPreTaxCost()
-    // const tax$ = calculateTax(preTax).subscribe(
-    // )
-    // console.log('check', calcTotalCost())
-    // console.log('tax!', tax)
-    // console.log('cartItems state changed!')
-    // console.log('object:  ', calcTotalItems())
-  }, [cartItems]); // console.log('check3', totalItemCost)
-  // console.log('check', calcTotalCost())
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {// const preTax = calcPreTaxCost()
-    // const tax$ = calculateTax(preTax).subscribe(
-    // )
-    // console.log('totalCartItem state changed!')
-    // console.log('toalItems: ', totalCartItem);
-    // console.log('object:  ', calcTotalItems())
-  }, [totalCartItem]);
+  const [totalCartItem, setTotalItems] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(totalCartItems());
 
   const handleChange = index => e => {
     let updatedCart = cartItems;
@@ -10528,9 +10741,7 @@ function Menu() {
     state: {
       applied: true
     }
-  }; // console.log('cartitems: ', cartItems);
-  // console.log('object', calcTotalItems())
-
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "offcanvas offcanvas-end",
     tabIndex: "-1",
@@ -10669,9 +10880,9 @@ function Menu() {
   }, "Shop")))))));
 }
 
-__signature__(Menu, "useLocation{location}\nuseHistory{history}\nuseCart{[items, totalItems, totalItemCost, tax, addOne, getCart, updateCart, removeItem, totalCartItems, calcTotalCost, // calcTotalItems,\n  deleteCartItem, setCheckOut, empty]}\nuseState{[cartItems, setCartItems](getCart())}\nuseState{[totalCartItem, setTotalItems](totalCartItems())}\nuseEffect{}\nuseEffect{}", () => [react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useLocation, react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useHistory, _Hooks_Cart_Helper__WEBPACK_IMPORTED_MODULE_1__.useCart]);
+__signature__(Menu, "useLocation{location}\nuseHistory{history}\nuseCart{[items, totalItems, totalItemCost, tax, addOne, getCart, updateCart, removeItem, totalCartItems, calcTotalCost, // calcTotalItems,\n  deleteCartItem, setCheckOut, empty]}\nuseState{[cartItems, setCartItems](getCart())}\nuseState{[totalCartItem, setTotalItems](totalCartItems())}", () => [react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useLocation, react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useHistory, _Hooks_Cart_Helper__WEBPACK_IMPORTED_MODULE_1__.useCart]);
 
-__signature__(Menu, "useLocation{location}\nuseHistory{history}\nuseCart{[items,\n        totalItems,\n        totalItemCost,\n        tax,\n        addOne,\n        getCart,\n        updateCart,\n        removeItem,\n        totalCartItems,\n        calcTotalCost,\n        // calcTotalItems,\n        deleteCartItem,\n        setCheckOut,\n        empty\n    ]}\nuseState{[cartItems, setCartItems](getCart())}\nuseState{[totalCartItem, setTotalItems](totalCartItems())}\nuseEffect{}\nuseEffect{}", () => [react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useLocation, react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useHistory, _Hooks_Cart_Helper__WEBPACK_IMPORTED_MODULE_1__.useCart]);
+__signature__(Menu, "useLocation{location}\nuseHistory{history}\nuseCart{[items,\n        totalItems,\n        totalItemCost,\n        tax,\n        addOne,\n        getCart,\n        updateCart,\n        removeItem,\n        totalCartItems,\n        calcTotalCost,\n        // calcTotalItems,\n        deleteCartItem,\n        setCheckOut,\n        empty\n    ]}\nuseState{[cartItems, setCartItems](getCart())}\nuseState{[totalCartItem, setTotalItems](totalCartItems())}", () => [react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useLocation, react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useHistory, _Hooks_Cart_Helper__WEBPACK_IMPORTED_MODULE_1__.useCart]);
 
 ;
 const _default = Menu;
