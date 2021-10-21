@@ -10865,7 +10865,7 @@ function Menu() {
   }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "nav-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-    to: `/all`,
+    to: `/price`,
     key: uuid__WEBPACK_IMPORTED_MODULE_2___default()(),
     className: "nav-link",
     role: "button",

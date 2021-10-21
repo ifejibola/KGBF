@@ -180,7 +180,7 @@ function Menu() {
                             <li className="nav-item">
                                 {/* <Link to="/all" className="nav-link" role="button" */}
                                 {/* <Link to={linkTarget} className="nav-link" role="button" */}
-                                <Link to={`/all`} key={uuid()} className="nav-link" role="button"
+                                <Link to={`/price`} key={uuid()} className="nav-link" role="button"
                                     aria-expanded="false">
                                     Services
                                 </Link>
