@@ -8104,10 +8104,10 @@ const _default2 = _default;
 
 /***/ }),
 
-/***/ "./client/component/Pricing.js":
-/*!*************************************!*\
-  !*** ./client/component/Pricing.js ***!
-  \*************************************/
+/***/ "./client/component/MailTo.js":
+/*!************************************!*\
+  !*** ./client/component/MailTo.js ***!
+  \************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -8116,6 +8116,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
 (function () {
   var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
@@ -8137,164 +8138,280 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 
 
+
+const ButtonMailto = ({
+  mailto,
+  label
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "#",
+    onClick: e => {
+      window.location = mailto;
+      e.preventDefault();
+    }
+  }, label);
+};
+
+const _default = ButtonMailto;
+const _default2 = _default;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_default2);
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(ButtonMailto, "ButtonMailto", "/Users/ife/kingdomBoxing/client/component/MailTo.js");
+  reactHotLoader.register(_default, "default", "/Users/ife/kingdomBoxing/client/component/MailTo.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(__signature__, "__signature__", "/Users/ife/kingdomBoxing/client/component/MailTo.js");
+  reactHotLoader.register(ButtonMailto, "ButtonMailto", "/Users/ife/kingdomBoxing/client/component/MailTo.js");
+  reactHotLoader.register(_default, "_default", "/Users/ife/kingdomBoxing/client/component/MailTo.js");
+  reactHotLoader.register(_default2, "default", "/Users/ife/kingdomBoxing/client/component/MailTo.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+
+/***/ }),
+
+/***/ "./client/component/Pricing.js":
+/*!*************************************!*\
+  !*** ./client/component/Pricing.js ***!
+  \*************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _MailTo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MailTo */ "./client/component/MailTo.js");
+/* module decorator */ module = __webpack_require__.hmd(module);
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+
+
+
+
 function Pricing() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    class: "py-15 py-xl-20"
+    className: "py-15 py-xl-20"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "container mt-10"
+    className: "container mt-10"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "row justify-content-center mb-10"
+    className: "row justify-content-center mb-10"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "col-lg-8 text-center"
+    className: "col-lg-8 text-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
-    class: "mb-2"
+    className: "mb-2"
   }, "Get started with Boxing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "fs-lg text-secondary"
+    className: "fs-lg text-secondary"
   }, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint saepe, quae esse accusantium unde, quidem eius officia incidunt, deserunt veritatis molestias et voluptates?"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "row g-3 g-xl-5 align-items-end"
+    className: "row g-3 g-xl-5 align-items-end"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "col-lg-4"
+    className: "col-lg-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card border bg-primary inverted"
+    className: "card border bg-primary inverted"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card-body"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    class: "h1 mb-4"
-  }, "$49"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "text-muted mb-4"
+    className: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "fs-lg text-white"
+  }, "Childs Boxing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "fs-lg text-white"
+  }, "Monthly Fee, 4PM-6PM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "h1 mb-4"
+  }, "$100"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "text-muted mb-4"
   }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    class: "list-unstyled mb-4"
+    className: "list-unstyled mb-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "py-1"
-  }, "6 Premium accounts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "py-1"
-  }, "Ad-free usic listening"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "py-1"
-  }, "Listen to music ad-free")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "d-grid"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
-    class: "btn btn-outline-white btn-lg rounded-pill btn-with-icon"
-  }, "Buy Now ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    class: "bi bi-arrow-right"
+    className: "py-1"
+  }, "Monday"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "py-1"
+  }, "Wednesday"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "py-1"
+  }, "Friday"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "py-1"
+  }, '.')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "d-grid"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
+    className: "btn btn-outline-white btn-lg rounded-pill btn-with-icon"
+  }, "Contact", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    className: "bi bi-arrow-right"
   })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "col-md-6 col-lg-4"
+    className: "col-md-6 col-lg-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card border"
+    className: "card border"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card-body"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    class: "h1 mb-4"
-  }, "$149"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "text-muted mb-4"
+    className: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "fs-lg text-black"
+  }, "Personal Training"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "fs-lg text-black"
+  }, "Monthly Fee, 4PM-6PM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "h1 mb-4"
+  }, "$30/150"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "text-muted mb-4"
   }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    class: "list-unstyled mb-4"
+    className: "list-unstyled mb-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "py-1"
-  }, "6 Premium accounts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "py-1"
-  }, "Ad-free usic listening"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "py-1"
-  }, "Listen to music ad-free")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "d-grid"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
-    class: "btn btn-outline-primary btn-lg rounded-pill btn-with-icon"
-  }, "Buy Now ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    class: "bi bi-arrow-right"
+    className: "py-1"
+  }, "$30/month - Drop In"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "py-1"
+  }, "$150/month - 1 day a week"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "py-1"
+  }, "$200/month - 2 day a week"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "py-1"
+  }, "$275/month - 4 day a week")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "d-grid"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
+    className: "btn btn-outline-primary btn-lg rounded-pill btn-with-icon"
+  }, "Contact ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    className: "bi bi-arrow-right"
   })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "col-md-6 col-lg-4"
+    className: "col-md-6 col-lg-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card border"
+    className: "card border"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card-body"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    class: "h1 mb-4"
+    className: "card-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "fs-lg text-black"
+  }, "Boxing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "fs-lg text-black"
+  }, "Monthly Fee, 4PM-6PM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "h1 mb-4"
   }, "$449"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "text-muted mb-4"
+    className: "text-muted mb-4"
   }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    class: "list-unstyled mb-4"
+    className: "list-unstyled mb-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "py-1"
-  }, "6 Premium accounts"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "py-1"
-  }, "Ad-free usic listening"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "py-1"
-  }, "Listen to music ad-free")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "d-grid"
+    className: "py-1"
+  }, "$50/month - Drop In"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "py-1"
+  }, "$175/month - 1 day a week"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "py-1"
+  }, "$275/month - 2 day a week"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "py-1"
+  }, "$375/month - 4 day a week")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "d-grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
-    class: "btn btn-outline-primary btn-lg rounded-pill btn-with-icon"
-  }, "Buy Now ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    class: "bi bi-arrow-right"
+    href: "mailto:kingdomsfitnessboxing@gmail.com?subject=Boxing Inquiry",
+    className: "btn btn-outline-primary btn-lg rounded-pill btn-with-icon"
+  }, "Contact", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+    className: "bi bi-arrow-right"
   }))))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    class: "py-15 py-xl-20 border-top"
+    className: "py-15 py-xl-20 border-top"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "container"
+    className: "container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "row align-items-center justify-content-between"
+    className: "row align-items-center justify-content-between"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "col-xl-5 mb-5 mb-xl-0"
+    className: "col-xl-5 mb-5 mb-xl-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    class: "mb-2"
-  }, "What users think about Cube?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "",
-    class: "underline action"
+    className: "mb-2"
+  }, "What users think?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    to: "",
+    className: "underline action"
   }, "Write a review ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    class: "bi bi-arrow-right"
+    className: "bi bi-arrow-right"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "col-xl-7"
+    className: "col-xl-7"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "row g-2",
+    className: "row g-2",
     "data-masonry": true
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "col-md-6"
+    className: "col-md-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card bg-light"
+    className: "card bg-light"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card-body"
+    className: "card-body"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    class: "bi bi-twitter fs-5"
+    className: "bi bi-twitter fs-5"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "fs-lg text-secondary my-4"
+    className: "fs-lg text-secondary my-4"
   }, "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias quam ipsa dolorem et, consequatur ipsum"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "lh-1 fs-lg"
+    className: "lh-1 fs-lg"
   }, "Michael Doe")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "col-md-6"
+    className: "col-md-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card bg-light"
+    className: "card bg-light"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card-body"
+    className: "card-body"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    class: "bi bi-twitter fs-5"
+    className: "bi bi-twitter fs-5"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "fs-lg text-secondary my-4"
+    className: "fs-lg text-secondary my-4"
   }, "Lorem ipsum dolor, sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "lh-1 fs-lg"
+    className: "lh-1 fs-lg"
   }, "Michael Doe")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "col-md-6"
+    className: "col-md-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card bg-light"
+    className: "card bg-light"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card-body"
+    className: "card-body"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    class: "bi bi-bootstrap-fill fs-5"
+    className: "bi bi-bootstrap-fill fs-5"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "fs-lg text-secondary my-4"
+    className: "fs-lg text-secondary my-4"
   }, "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias quam ipsa dolorem et, consequatur ipsum"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "lh-1 fs-lg"
+    className: "lh-1 fs-lg"
   }, "Michael Doe")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "col-md-6"
+    className: "col-md-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card bg-light"
+    className: "card bg-light"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "card-body"
+    className: "card-body"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
-    class: "bi bi-twitter fs-5"
+    className: "bi bi-twitter fs-5"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "fs-lg text-secondary my-4"
+    className: "fs-lg text-secondary my-4"
   }, "Lorem ipsum dolor, sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    class: "lh-1 fs-lg"
+    className: "lh-1 fs-lg"
   }, "Michael Doe"))))))))));
 }
 
@@ -8360,6 +8477,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _AddToCart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddToCart */ "./client/component/AddToCart.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
 (function () {
@@ -8427,6 +8545,9 @@ function Product(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "carousel"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "tns-outer",
+    id: "tns1-ow"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "tns-controls",
     "aria-label": "Carousel Navigation",
     tabIndex: "0"
@@ -8435,16 +8556,28 @@ function Product(props) {
     "data-controls": "prev",
     tabIndex: "-1",
     "aria-controls": "tns1"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "bi bi-arrow-left"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     type: "button",
     "data-controls": "next",
     tabIndex: "-1",
     "aria-controls": "tns1"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "bi bi-arrow-right"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "tns-liveregion tns-visually-hidden",
+    "aria-live": "polite",
+    "aria-atomic": "true"
+  }, "slide ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "current"
+  }, "2"), "  of 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    id: "tns1-mw",
+    className: "tns-ovh"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "tns-inner",
+    id: "tns1-iw"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     "data-carousel": "{\"mouseDrag\": true, \"navContainer\": \"#nav-1\", \"gutter\": 8, \"loop\": true, \"items\": 1}",
     style: {
       verticalAlign: 'top',
@@ -8503,20 +8636,36 @@ function Product(props) {
       position: 'absolute',
       overflow: 'hidden'
     }
-  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  })))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "col-md-2 order-md-1"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "carousel-thumbs d-flex flex-row flex-md-column",
-    id: "nav-1"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    id: "nav-1",
+    "aria-label": "Carousel Pagination"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "data-nav": "0",
+    "aria-label": "Carousel Page 1 (Current Slide)",
+    "aria-controls": "tns1",
+    className: "tns-nav-active"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "img-fluid",
     src: product.default_image,
     alt: "Image"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "data-nav": "1",
+    "aria-label": "Carousel Page 2 (Current Slide)",
+    "aria-controls": "tns1",
+    tabIndex: "-1"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "img-fluid",
     src: images.two,
     alt: "Image"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    "data-nav": "2",
+    "aria-label": "Carousel Page 3 (Current Slide)",
+    "aria-controls": "tns1",
+    tabIndex: "-1"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "img-fluid",
     src: images.three,
     alt: "Image"
@@ -8526,11 +8675,11 @@ function Product(props) {
     className: "mb-1"
   }, product.product_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "fs-5 mb-3"
-  }, "$", product.product_price, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("s", {
+  }, "$", product.product_price, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("s", {
     className: "text-muted ms-1"
   }, "$39")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "text-secondary mb-3"
-  }, "This coat has a blazer silhouette with notched lapels and front welt pockets. Transition into the new season with this tailored outerwear piece and style it with a cropped tee and trousers."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "This coat has a blazer silhouette with notched lapels and front welt pockets. Transition into the new season with this tailored outerwear piece and style it with a cropped tee and trousers. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "d-flex align-items-center mb-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
     className: "rating text-yellow me-2 fs-6"
@@ -8544,10 +8693,10 @@ function Product(props) {
     className: "bi bi-star-fill"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
     className: "bi bi-star-fill"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "",
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    to: "",
     className: "underline action fs-sm text-black"
-  }, "Read all 4 reviews ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
+  }, "Read all 4 reviews ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "bi bi-arrow-right"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "accordion mb-3",
@@ -8573,7 +8722,7 @@ function Product(props) {
     className: "accordion-body"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "text-secondary"
-  }, "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Illo, voluptas.Quibusdam, quia.Accusantium, quo maxime est ullam at voluptas aspernatur.Iure assumenda labore esse vero ad.Deleniti ea totam dolorem.")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, voluptas. Quibusdam, quia. Accusantium, quo maxime est ullam at voluptas aspernatur. Iure assumenda labore esse vero ad. Deleniti ea totam dolorem.")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "accordion-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     className: "accordion-header",
@@ -8594,18 +8743,16 @@ function Product(props) {
     className: "accordion-body"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "text-secondary"
-  }, "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Illo, voluptas.Quibusdam, quia.Accusantium, quo maxime est ullam at voluptas aspernatur.Iure assumenda labore esse vero ad.Deleniti ea totam dolorem."))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, voluptas. Quibusdam, quia. Accusantium, quo maxime est ullam at voluptas aspernatur. Iure assumenda labore esse vero ad. Deleniti ea totam dolorem."))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "row g-1 align-items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_AddToCart__WEBPACK_IMPORTED_MODULE_1__.default, {
-    cart: {
-      id: product.product_uuid,
-      product_name: product.product_name,
-      product_price: product.product_price,
-      img_path: product.default_image
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "col-auto"
-  })))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "col"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "d-grid"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    to: "",
+    className: "btn btn-primary btn-lg rounded-pill"
+  }, "Add to cart")))))))));
 }
 
 __signature__(Product, "useState{[redirect, setRedirect](false)}\nuseState{[loadStatus, setStatus](false)}\nuseLocation{{\n    pathname\n  }}\nuseEffect{}", () => [react_router_dom__WEBPACK_IMPORTED_MODULE_2__.useLocation]);
@@ -10505,81 +10652,7 @@ function ComingSoon() {
     className: "card-footer mt-auto"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
     className: "fs-lg"
-  }, "@kingdomsfitnessboxing")))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-    className: "py-15 py-xl-20"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row justify-content-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "col-lg-6 text-center mb-8"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "badge bg-opaque-primary text-primary mb-2 rounded-pill"
-  }, "Pricing Plans"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    className: "fw-bold"
-  }, "Get started with BOXING"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: "text-secondary"
-  }, "Choose an option that fits your need, Boxing, Personal Training, Childrens Boxing"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row g-3 g-xl-5 align-items-end"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "col-md-6 col-lg-4",
-    "data-aos": "fade-up"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "card border border-primary text-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "card-body bg-primary inverted"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "fs-lg text-white"
-  }, "Personal Training"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: "fs-lg text-white"
-  }, "starting at"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    className: "h1 my-2"
-  }, "$"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: "text-secondary fs-lg"
-  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "d-grid mt-5"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
-    className: "btn btn-white btn-lg rounded-pill"
-  }, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "col-md-6 col-lg-4",
-    "data-aos": "fade-up",
-    "data-aos-delay": "100"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "card border text-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "card-body"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "fs-lg text-primary"
-  }, "Open Area"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    className: "h1 my-2"
-  }, "$39"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: "text-secondary fs-lg"
-  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "d-grid mt-5"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
-    className: "btn btn-outline-primary btn-lg rounded-pill"
-  }, "Contact"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "col-md-6 col-lg-4",
-    "data-aos": "fade-up",
-    "data-aos-delay": "200"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "card border text-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "card-body"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "fs-lg text-primary"
-  }, "Office"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-    className: "h1 my-2"
-  }, "$129"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: "text-secondary fs-lg"
-  }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "d-grid mt-5"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    to: "https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/",
-    className: "btn btn-outline-primary btn-lg rounded-pill"
-  }, "Contact")))))))));
+  }, "@kingdomsfitnessboxing")))))))));
 }
 
 __signature__(ComingSoon, "useEffect{}");
@@ -10757,14 +10830,12 @@ function Menu() {
     "aria-label": "Close"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "offcanvas-body"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: "list-unstyled"
   }, getCart().map((data, i) => {
-    // cartItems.map((data, i) => {
     console.log('nav data', data);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+      className: "list-unstyled",
       key: i
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "row g-2 g-lg-3 align-items-center"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
       to: `/product/${data.id}`,
@@ -10789,7 +10860,9 @@ function Menu() {
     }, "Qty:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "counter text-secondary",
       "data-counter": "qty-1"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+      className: "counter-minus bi bi-dash"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
       type: "number",
       name: "quantity",
       className: "counter-value",
@@ -10797,12 +10870,14 @@ function Menu() {
       max: "10",
       onChange: handleChange(i),
       value: data.quantity
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+      className: "counter-plus bi bi-plus"
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
       to: "#",
       className: "text-red underline",
       onClick: deleteItem(i)
-    }, "Remove"))));
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, "Remove")))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "offcanvas-footer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "d-grid gap-1"
@@ -10822,6 +10897,16 @@ function Menu() {
   }, "KINGDOM BOXING"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
     className: "navbar-nav navbar-nav-secondary order-lg-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "nav-item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "nav-link nav-icon",
+    "data-bs-toggle": "offcanvas",
+    href: "#offcanvasCart",
+    role: "button",
+    "aria-controls": "offcanvasCart"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "bi bi-cart2"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "nav-item d-lg-none"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "#",
@@ -10836,17 +10921,7 @@ function Menu() {
     className: "bi bi-list"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "nav-item d-none d-lg-block"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "btn btn-outline-white rounded-pill ms-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "nav-icon",
-    "data-bs-toggle": "offcanvas",
-    href: "#offcanvasCart",
-    role: "button",
-    "aria-controls": "offcanvasCart"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "bi bi-cart2"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "/shop",
     className: "btn btn-outline-white rounded-pill ms-2"
   }, "SHOP"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {

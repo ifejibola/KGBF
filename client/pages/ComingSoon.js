@@ -366,7 +366,7 @@ function ComingSoon() {
             </section>
 
             {/* <!-- pricing --> */}
-            <section className="py-15 py-xl-20">
+            {/* <section className="py-15 py-xl-20">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-6 text-center mb-8">
@@ -419,7 +419,7 @@ function ComingSoon() {
                     </div>
                 </div>
             </section>
-
+ */}
 
 
         </>

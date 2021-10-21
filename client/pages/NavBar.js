@@ -73,13 +73,12 @@ function Menu() {
                     <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body">
-                    <ul className="list-unstyled">
-                        {
-                            getCart().map((data, i) => {
-                                // cartItems.map((data, i) => {
-                                console.log('nav data', data)
-                                return (
-                                    <li key={i}>
+                    {
+                        getCart().map((data, i) => {
+                            console.log('nav data', data)
+                            return (
+                                <ul className="list-unstyled" key={i}>
+                                    <li>
                                         <div className="row g-2 g-lg-3 align-items-center">
                                             <Link to={`/product/${data.id}`} className="col-3"><img className="img-fluid" src={data.img}
                                                 alt="Product" /></Link>
@@ -87,13 +86,11 @@ function Menu() {
                                                 <Link to={`/product/${data.id}`} className="text-black text-primary-hover lead">{data.name}</Link>
                                                 <ul className="list-inline text-muted">
                                                     <li className="list-inline-item">Price: <span className="text-secondary">${data.price}</span></li>
-                                                    {/* <li className="list-inline-item">Color: <span className="text-secondary">Blue</span></li> */}
                                                     <li className="list-inline-item">Qty:
                                                         <div className="counter text-secondary" data-counter="qty-1">
-                                                            {/* <span className="counter-minus bi bi-dash"></span> */}
-                                                            {/* <input type="number" name="quantity" className="counter-value" min={data.quantity} max="10" onChange={handleChange(i)} /> */}
+                                                            <span className="counter-minus bi bi-dash"></span>
                                                             <input type="number" name="quantity" className="counter-value" min="0" max="10" onChange={handleChange(i)} value={data.quantity} />
-                                                            {/* <span className="counter-plus bi bi-plus"></span> */}
+                                                            <span className="counter-plus bi bi-plus"></span>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -101,11 +98,12 @@ function Menu() {
                                             </div>
                                         </div>
                                     </li>
-                                )
+                                </ul>
 
-                            })
-                        }
-                    </ul>
+                            )
+
+                        })
+                    }
                 </div>
                 <div className="offcanvas-footer">
                     <div className="d-grid gap-1">
@@ -123,43 +121,26 @@ function Menu() {
 
                     {/* <!-- secondary --> */}
                     <ul className="navbar-nav navbar-nav-secondary order-lg-3">
+                        {/* Cart */}
+                        <li className="nav-item">
+                            <div className="nav-link nav-icon" data-bs-toggle="offcanvas" href="#offcanvasCart" role="button" aria-controls="offcanvasCart">
+                                <div className="bi bi-cart2"></div>
+                            </div>
+                        </li>
                         <li className="nav-item d-lg-none">
                             <Link to="#" className="nav-link nav-icon" role="button" data-bs-toggle="collapse" data-bs-target="#navbar"
                                 aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="bi bi-list"></span>
                             </Link>
                         </li>
+                        {/* Cart
+                        <li className="nav-item">
+                            <div className="nav-link nav-icon" data-bs-toggle="offcanvas" href="#offcanvasCart" role="button" aria-controls="offcanvasCart">
+                                <i className="bi bi-cart2"></i>
+                            </div>
+                        </li> */}
                         <li className="nav-item d-none d-lg-block">
-                            <span className="btn btn-outline-white rounded-pill ms-2">
-                                <div className="nav-icon" data-bs-toggle="offcanvas" href="#offcanvasCart" role="button"
-                                    aria-controls="offcanvasCart">
-                                    {/* <div className="bi bi-cart2"> {totalCartItem}</div> */}
-                                    <div className="bi bi-cart2"></div>
-                                </div>
 
-                            </span>
-                            {/* <Link to="#" className="btn btn-outline-white rounded-pill ms-2">
-                                <div className="nav-link nav-icon" data-bs-toggle="offcanvas" href="#offcanvasCart" role="button"
-                                    aria-controls="offcanvasCart">
-                                    <div className="bi bi-cart2"> {totalCartItem}</div>
-                                </div>
-
-                            </Link> */}
-                            {
-                                // cartItems.length === 0 ?
-                                //     ""
-                                //     :
-                                //     (
-                                //         <span className="btn btn-outline-white rounded-pill ms-2">
-                                //             <div className="nav-icon" data-bs-toggle="offcanvas" href="#offcanvasCart" role="button"
-                                //                 aria-controls="offcanvasCart">
-                                //                 <div className="bi bi-cart2"> {totalCartItem}</div>
-                                //                 <div className="bi bi-cart2"></div>
-                                //             </div>
-
-                                //         </span>
-                                //     )
-                            }
                             <Link to="/shop" className="btn btn-outline-white rounded-pill ms-2">
                                 SHOP
                             </Link>
@@ -168,6 +149,7 @@ function Menu() {
 
                     {/* <!-- primary --> */}
                     <div className="collapse navbar-collapse" id="navbar" data-bs-parent="#mainNav">
+
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 {/* <Link to="/" className="nav-link dropdown-toggle" href="#" id="navbarDropdown-1" role="button" data-bs-toggle="dropdown"
@@ -177,6 +159,7 @@ function Menu() {
                                     Home
                                 </Link>
                             </li>
+
                             <li className="nav-item">
                                 {/* <Link to="/all" className="nav-link" role="button" */}
                                 {/* <Link to={linkTarget} className="nav-link" role="button" */}
@@ -191,6 +174,7 @@ function Menu() {
                                     className="nav-link text-primary">Shop</Link>
                             </li>
                         </ul>
+
                     </div>
                     {/* <!-- mobile user menu --> */}
                 </div>
