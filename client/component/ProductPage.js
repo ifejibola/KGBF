@@ -11,7 +11,6 @@ function Product(props) {
 
     useEffect(() => {
         setStatus(true);
-        console.log('object');
         window.scrollTo(0, 0);
         // window.location.reload();
         console.log('pathname-useLocation(): ', pathname)

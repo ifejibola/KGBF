@@ -8396,7 +8396,6 @@ function Product(props) {
   } = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     setStatus(true);
-    console.log('object');
     window.scrollTo(0, 0); // window.location.reload();
 
     console.log('pathname-useLocation(): ', pathname);
@@ -10703,7 +10702,6 @@ const initialItems = [{
 function Menu() {
   const location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useLocation)();
   const history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useHistory)();
-  console.log('locationnn: ', location);
   const [items, totalItems, totalItemCost, tax, addOne, getCart, updateCart, removeItem, totalCartItems, calcTotalCost, // calcTotalItems,
   deleteCartItem, setCheckOut, empty] = (0,_Hooks_Cart_Helper__WEBPACK_IMPORTED_MODULE_1__.useCart)(initialItems);
   const [cartItems, setCartItems] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(getCart());
@@ -11836,7 +11834,7 @@ function ShopPage(props) {
   let {
     products
   } = props;
-  console.log('jkfldj', products);
+  console.log('Shop Products:', products);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_component_Shop__WEBPACK_IMPORTED_MODULE_3__.default, {
     products: products
   }));

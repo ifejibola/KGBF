@@ -17,9 +17,6 @@ function Menu() {
 
     const location = useLocation();
     const history = useHistory();
-
-    console.log('locationnn: ', location)
-
     const [items,
         totalItems,
         totalItemCost,

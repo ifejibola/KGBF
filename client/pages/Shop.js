@@ -12,7 +12,7 @@ function ShopPage(props) {
     }, []);
 
     let { products } = props;
-    console.log('jkfldj', products)
+    console.log('Shop Products:', products)
     return (
         <>
             <Shop products={products} />
