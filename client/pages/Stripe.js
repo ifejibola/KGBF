@@ -11,6 +11,7 @@ import PlaceOrder from './placeOrder';
 import { PayIntent } from '../actions/shopActions'
 
 import { useCart } from '../Hooks/Cart-Helper'
+import { Redirect } from 'react-router';
 let initialItems = [{
     name: '',
     price: '',
@@ -57,6 +58,7 @@ function Stripe(props) {
     const [processing, setProcessing] = useState('');
     const [disabled, setDisabled] = useState(true);
     const [clientSecret, setClientSecret] = useState('');
+    const [message, setMsg] = useState('');
     // const [orders, setOrder] = useState(order)
     const stripe = useStripe();
     const elements = useElements();
@@ -93,14 +95,32 @@ function Stripe(props) {
         }
     });
 
-    useEffect(() => {
+    useEffect(async () => {
         // Create PaymentIntent as soon as the page laods
 
         console.log('cartItems: ', cartItems)
         props.PayIntent(cartItems);
         console.log('secret: ', props.secret);
         console.log(calcTotalCost())
-    }, []);
+
+        // await stripe.retrievePaymentIntent(props.secret).then(({ paymentIntent }) => {
+        //     console.log('paymentint stat: ', paymentIntent.status)
+        //     switch (paymentIntent.status) {
+        //         case "succeeded":
+        //             setMsg('Payment Succeeded!');
+        //             break;
+        //         case "processing":
+        //             setMsg('Your payment is processing');
+        //             break;
+        //         case "requires_payment_method":
+        //             setMsg('You payment was not successful, please try again.');
+        //             break;
+        //         default:
+        //             setMsg('Something went wrong.');
+        //             break;
+        //     }
+        // });
+    }, [stripe]);
 
     const handleCustomerChange = name => e => {
         let checkoutDetails = cartItems.checkoutDetails
@@ -118,24 +138,18 @@ function Stripe(props) {
         // console.log('cartnAME: ', name)
 
         // console.log('cart value: ', setValue)
-
         setItems({
             ...cartItems,
             checkoutDetails: cartName
         });
 
         let checkoutDetails = cartItems.checkoutDetails
-        // console.log(e.target)
-        // Listen for changes in the CardElement
-        // Display any errors as the customer types their card details
-        // if (getCart().length <= 0) {
-        //     setDisabled(false);
-        //     // setProcessing(false);
-        //     setError(e.error ? e.error.message : "");
-        // }
+
         setDisabled(e.empty);
         setError(e.error ? e.error.message : "");
     };
+
+
 
     const handleSubmit = async ev => {
         ev.preventDefault();
@@ -145,9 +159,26 @@ function Stripe(props) {
         const payload = await stripe.confirmCardPayment(props.secret, {
             payment_method: {
                 card: elements.getElement(CardElement)
+            },
+            receipt_email: cartItems.checkoutDetails.customer_email
+        });
+        stripe.retrievePaymentIntent(props.secret).then(({ paymentIntent }) => {
+            console.log('paymentint stat: ', paymentIntent.status)
+            switch (paymentIntent.status) {
+                case "succeeded":
+                    setMsg('Payment Succeeded!');
+                    break;
+                case "processing":
+                    setMsg('Your payment is processing');
+                    break;
+                case "requires_payment_method":
+                    setMsg('You payment was not successful, please try again.');
+                    break;
+                default:
+                    setMsg('Something went wrong.');
+                    break;
             }
         });
-
         console.log('payload:: ', payload)
         if (payload.error) {
             setError(`Payment failed ${payload.error.message}`);
@@ -157,6 +188,7 @@ function Stripe(props) {
             props.PayIntent(cartItems);
             empty();
             setError(null);
+            // <Redirect to="/" />
             setProcessing(false);
             setSucceeded(true);
         }
@@ -180,15 +212,14 @@ function Stripe(props) {
                             </div>
 
                             <PlaceOrder handleSubmit={handleSubmit} totalItemCost={calcTotalCost()} cart={getCart()} processingStat={processing} isDisabled={disabled} iSsucceeded={succeeded} />
-
+                            <p>{" "}</p>
+                            <div>{error ? (<p className="alert alert-secondary" role="alert">{error}</p>) : ''}</div>
+                            <p>{" "}</p>
+                            <div>{message ? (<p className="alert alert-secondary" role="alert">{message}</p>) : ''}</div>
                         </div>
                     </div>
                 </section>
             </div>
-
-
-            {/* <Checkout onChange={handleChange} handleSubmit={handleSubmit} state={cartItems.checkoutDetails} />
-            <PlaceOrder handleSubmit={handleSubmit} /> */}
         </>
     )
 }

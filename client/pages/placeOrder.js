@@ -126,12 +126,7 @@ function PlaceOrder(props) {
                         <div className="d-grid text-center">
                             {
                                 totalItemCost === 0 || cart.length <= 0 ? (
-                                    // props.processingStat ? (
-                                    // <button
-                                    //     id="submit"
-                                    //     className="btn btn-lg btn-primary rounded-pill"
-                                    // // disabled
-                                    // >
+
 
                                     <Link to="/shop" className="btn btn-lg btn-primary rounded-pill"
                                         style={{ color: 'white' }}>
@@ -143,21 +138,22 @@ function PlaceOrder(props) {
                                             Shop Now
                                         </button>
                                     </Link>
-                                    // {/* </button> */}
 
                                 )
                                     :
                                     (
+                                        <>
+                                            <button
+                                                id="submit"
+                                                className="btn btn-lg btn-primary rounded-pill"
+                                                disabled={props.processingStat || isDisabled || iSsucceeded}
+                                                onClick={props.handleSubmit}
+                                            >
+                                                { }
+                                                Pay
+                                            </button>
 
-                                        <button
-                                            id="submit"
-                                            className="btn btn-lg btn-primary rounded-pill"
-                                            disabled={props.processingStat || isDisabled || iSsucceeded}
-                                            onClick={props.handleSubmit}
-                                        >
-                                            Pay
-                                        </button>
-
+                                        </>
                                     )
                             }
                             {/* <button

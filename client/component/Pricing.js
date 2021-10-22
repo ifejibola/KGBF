@@ -45,7 +45,7 @@ function Pricing() {
                                 <div className="card-body">
                                     <h1 className="fs-lg text-black">Personal Training</h1>
                                     <p className="fs-lg text-black">{"Monthly Fee, 4PM-6PM"}</p>
-                                    <h2 className="h1 mb-4">$30/150</h2>
+                                    <h2 className="h1 mb-4">$150</h2>
                                     <p className="text-muted mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                     <ul className="list-unstyled mb-4">
                                         <li className="py-1">$30/month - Drop In</li>

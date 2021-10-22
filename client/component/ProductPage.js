@@ -156,18 +156,12 @@ function Product(props) {
                                     </div>
                                 </div>
                             </div>
-
                             <div className="row g-1 align-items-center">
-                                <div className="col">
-                                    <div className="d-grid">
-                                        <Link to="" className="btn btn-primary btn-lg rounded-pill">Add to cart</Link>
-                                    </div>
-                                </div>
-                                {/* <div className="col-auto">
-                                    <Link to="" className="btn btn-outline-secondary btn-lg btn-icon rounded-circle"><i className="bi bi-heart-fill"></i></Link>
-                                </div> */}
+                                <AddToCart cart={{
+                                    id: product.product_uuid, product_name: product.product_name, product_price:
+                                        product.product_price, img_path: product.default_image
+                                }} />
                             </div>
-
                         </div>
                     </div>
                 </div>

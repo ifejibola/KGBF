@@ -8294,7 +8294,7 @@ function Pricing() {
     className: "fs-lg text-black"
   }, "Monthly Fee, 4PM-6PM"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     className: "h1 mb-4"
-  }, "$30/150"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }, "$150"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "text-muted mb-4"
   }, "Lorem ipsum dolor sit amet consectetur adipisicing elit."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
     className: "list-unstyled mb-4"
@@ -8745,14 +8745,14 @@ function Product(props) {
     className: "text-secondary"
   }, "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, voluptas. Quibusdam, quia. Accusantium, quo maxime est ullam at voluptas aspernatur. Iure assumenda labore esse vero ad. Deleniti ea totam dolorem."))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "row g-1 align-items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "col"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "d-grid"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-    to: "",
-    className: "btn btn-primary btn-lg rounded-pill"
-  }, "Add to cart")))))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_AddToCart__WEBPACK_IMPORTED_MODULE_1__.default, {
+    cart: {
+      id: product.product_uuid,
+      product_name: product.product_name,
+      product_price: product.product_price,
+      img_path: product.default_image
+    }
+  })))))));
 }
 
 __signature__(Product, "useState{[redirect, setRedirect](false)}\nuseState{[loadStatus, setStatus](false)}\nuseLocation{{\n    pathname\n  }}\nuseEffect{}", () => [react_router_dom__WEBPACK_IMPORTED_MODULE_2__.useLocation]);
@@ -10320,7 +10320,9 @@ function ComingSoon() {
       console.log('testing load:');
     };
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "offcanvas-wrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: "cover overflow-hidden bg-black inverted"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "d-flex flex-column py-20 min-vh-100 container foreground"
@@ -10334,14 +10336,20 @@ function ComingSoon() {
     to: "/shop",
     className: "btn btn-white rounded-pill"
   }, "Shop Now")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "browser shadow"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "/images/IMG_6122.JPG",
+    class: "img-fluid",
+    alt: "Image"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "background background-overlay text-black"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("video", {
-    playsInline: true,
-    autoPlay: true,
-    loop: true,
-    muted: true,
-    "data-video": true
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    class: "browser shadow"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "/images/IMG_6122.JPG",
+    class: "img-fluid",
+    alt: "Image"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "scroll-down"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: "py-15 py-xl-20 overflow-hidden"
@@ -10652,7 +10660,7 @@ function ComingSoon() {
     className: "card-footer mt-auto"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
     className: "fs-lg"
-  }, "@kingdomsfitnessboxing")))))))));
+  }, "@kingdomsfitnessboxing"))))))))));
 }
 
 __signature__(ComingSoon, "useEffect{}");
@@ -12190,6 +12198,7 @@ var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoader
 
 
 
+
 let initialItems = [{
   name: '',
   price: '',
@@ -12234,7 +12243,8 @@ function Stripe(props) {
   const [error, setError] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
   const [processing, setProcessing] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
   const [disabled, setDisabled] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
-  const [clientSecret, setClientSecret] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''); // const [orders, setOrder] = useState(order)
+  const [clientSecret, setClientSecret] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+  const [message, setMsg] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''); // const [orders, setOrder] = useState(order)
 
   const stripe = (0,_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.useStripe)();
   const elements = (0,_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.useElements)();
@@ -12258,13 +12268,29 @@ function Stripe(props) {
       total: calcTotalCost()
     }
   });
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(async () => {
     // Create PaymentIntent as soon as the page laods
     console.log('cartItems: ', cartItems);
     props.PayIntent(cartItems);
     console.log('secret: ', props.secret);
-    console.log(calcTotalCost());
-  }, []);
+    console.log(calcTotalCost()); // await stripe.retrievePaymentIntent(props.secret).then(({ paymentIntent }) => {
+    //     console.log('paymentint stat: ', paymentIntent.status)
+    //     switch (paymentIntent.status) {
+    //         case "succeeded":
+    //             setMsg('Payment Succeeded!');
+    //             break;
+    //         case "processing":
+    //             setMsg('Your payment is processing');
+    //             break;
+    //         case "requires_payment_method":
+    //             setMsg('You payment was not successful, please try again.');
+    //             break;
+    //         default:
+    //             setMsg('Something went wrong.');
+    //             break;
+    //     }
+    // });
+  }, [stripe]);
 
   const handleCustomerChange = name => e => {
     let checkoutDetails = cartItems.checkoutDetails;
@@ -12284,15 +12310,7 @@ function Stripe(props) {
     setItems({ ...cartItems,
       checkoutDetails: cartName
     });
-    let checkoutDetails = cartItems.checkoutDetails; // console.log(e.target)
-    // Listen for changes in the CardElement
-    // Display any errors as the customer types their card details
-    // if (getCart().length <= 0) {
-    //     setDisabled(false);
-    //     // setProcessing(false);
-    //     setError(e.error ? e.error.message : "");
-    // }
-
+    let checkoutDetails = cartItems.checkoutDetails;
     setDisabled(e.empty);
     setError(e.error ? e.error.message : "");
   };
@@ -12304,6 +12322,30 @@ function Stripe(props) {
     const payload = await stripe.confirmCardPayment(props.secret, {
       payment_method: {
         card: elements.getElement(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.CardElement)
+      },
+      receipt_email: cartItems.checkoutDetails.customer_email
+    });
+    stripe.retrievePaymentIntent(props.secret).then(({
+      paymentIntent
+    }) => {
+      console.log('paymentint stat: ', paymentIntent.status);
+
+      switch (paymentIntent.status) {
+        case "succeeded":
+          setMsg('Payment Succeeded!');
+          break;
+
+        case "processing":
+          setMsg('Your payment is processing');
+          break;
+
+        case "requires_payment_method":
+          setMsg('You payment was not successful, please try again.');
+          break;
+
+        default:
+          setMsg('Something went wrong.');
+          break;
       }
     });
     console.log('payload:: ', payload);
@@ -12314,7 +12356,8 @@ function Stripe(props) {
     } else {
       props.PayIntent(cartItems);
       empty();
-      setError(null);
+      setError(null); // <Redirect to="/" />
+
       setProcessing(false);
       setSucceeded(true);
     }
@@ -12343,12 +12386,18 @@ function Stripe(props) {
     processingStat: processing,
     isDisabled: disabled,
     iSsucceeded: succeeded
-  }))))));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "alert alert-secondary",
+    role: "alert"
+  }, error) : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, message ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "alert alert-secondary",
+    role: "alert"
+  }, message) : ''))))));
 }
 
-__signature__(Stripe, "useState{[succeeded, setSucceeded](false)}\nuseState{[error, setError](null)}\nuseState{[processing, setProcessing]('')}\nuseState{[disabled, setDisabled](true)}\nuseState{[clientSecret, setClientSecret]('')}\nuseStripe{stripe}\nuseElements{elements}\nuseCart{[items, totalItems, totalItemCost, tax, addOne, getCart, updateCart, removeItem, totalCartItems, calcTotalCost, // calcTotalItems,\n  deleteCartItem, setCheckOut, empty]}\nuseState{[cartItems, setItems]({\n    checkoutDetails: {\n      products: getCart(),\n      customer_name: '',\n      customer_email: '',\n      street: '',\n      city: '',\n      province: '',\n      zipcode: '',\n      country: '',\n      // deliveryInfo: {\n      //     street: '', city: '', state: '', zipcode: '', country: ''\n      // },\n      error: '',\n      total: calcTotalCost()\n    }\n  })}\nuseEffect{}", () => [_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.useStripe, _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.useElements, _Hooks_Cart_Helper__WEBPACK_IMPORTED_MODULE_7__.useCart]);
+__signature__(Stripe, "useState{[succeeded, setSucceeded](false)}\nuseState{[error, setError](null)}\nuseState{[processing, setProcessing]('')}\nuseState{[disabled, setDisabled](true)}\nuseState{[clientSecret, setClientSecret]('')}\nuseState{[message, setMsg]('')}\nuseStripe{stripe}\nuseElements{elements}\nuseCart{[items, totalItems, totalItemCost, tax, addOne, getCart, updateCart, removeItem, totalCartItems, calcTotalCost, // calcTotalItems,\n  deleteCartItem, setCheckOut, empty]}\nuseState{[cartItems, setItems]({\n    checkoutDetails: {\n      products: getCart(),\n      customer_name: '',\n      customer_email: '',\n      street: '',\n      city: '',\n      province: '',\n      zipcode: '',\n      country: '',\n      // deliveryInfo: {\n      //     street: '', city: '', state: '', zipcode: '', country: ''\n      // },\n      error: '',\n      total: calcTotalCost()\n    }\n  })}\nuseEffect{}", () => [_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.useStripe, _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.useElements, _Hooks_Cart_Helper__WEBPACK_IMPORTED_MODULE_7__.useCart]);
 
-__signature__(Stripe, "useState{[succeeded, setSucceeded](false)}\nuseState{[error, setError](null)}\nuseState{[processing, setProcessing]('')}\nuseState{[disabled, setDisabled](true)}\nuseState{[clientSecret, setClientSecret]('')}\nuseStripe{stripe}\nuseElements{elements}\nuseCart{[items,\n        totalItems,\n        totalItemCost,\n        tax,\n        addOne,\n        getCart,\n        updateCart,\n        removeItem,\n        totalCartItems,\n        calcTotalCost,\n        // calcTotalItems,\n        deleteCartItem,\n        setCheckOut,\n        empty\n    ]}\nuseState{[cartItems, setItems]({\n        checkoutDetails: {\n            products: getCart(),\n            customer_name: '',\n            customer_email: '',\n            street: '', city: '', province: '', zipcode: '', country: '',\n            // deliveryInfo: {\n            //     street: '', city: '', state: '', zipcode: '', country: ''\n            // },\n            error: '',\n            total: calcTotalCost(),\n        }\n    })}\nuseEffect{}", () => [_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.useStripe, _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.useElements, _Hooks_Cart_Helper__WEBPACK_IMPORTED_MODULE_7__.useCart]);
+__signature__(Stripe, "useState{[succeeded, setSucceeded](false)}\nuseState{[error, setError](null)}\nuseState{[processing, setProcessing]('')}\nuseState{[disabled, setDisabled](true)}\nuseState{[clientSecret, setClientSecret]('')}\nuseState{[message, setMsg]('')}\nuseStripe{stripe}\nuseElements{elements}\nuseCart{[items,\n        totalItems,\n        totalItemCost,\n        tax,\n        addOne,\n        getCart,\n        updateCart,\n        removeItem,\n        totalCartItems,\n        calcTotalCost,\n        // calcTotalItems,\n        deleteCartItem,\n        setCheckOut,\n        empty\n    ]}\nuseState{[cartItems, setItems]({\n        checkoutDetails: {\n            products: getCart(),\n            customer_name: '',\n            customer_email: '',\n            street: '', city: '', province: '', zipcode: '', country: '',\n            // deliveryInfo: {\n            //     street: '', city: '', state: '', zipcode: '', country: ''\n            // },\n            error: '',\n            total: calcTotalCost(),\n        }\n    })}\nuseEffect{}", () => [_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.useStripe, _stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_2__.useElements, _Hooks_Cart_Helper__WEBPACK_IMPORTED_MODULE_7__.useCart]);
 
 function mapStateToProps(state) {
   return {
@@ -12562,15 +12611,7 @@ function PlaceOrder(props) {
     className: "card-footer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "d-grid text-center"
-  }, totalItemCost === 0 || cart.length <= 0 ?
-  /*#__PURE__*/
-  // props.processingStat ? (
-  // <button
-  //     id="submit"
-  //     className="btn btn-lg btn-primary rounded-pill"
-  // // disabled
-  // >
-  react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+  }, totalItemCost === 0 || cart.length <= 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
     to: "/shop",
     className: "btn btn-lg btn-primary rounded-pill",
     style: {
@@ -12580,13 +12621,12 @@ function PlaceOrder(props) {
     id: "submit",
     className: "btn btn-lg btn-primary rounded-pill",
     disabled: true
-  }, "Shop Now")) // {/* </button> */}
-  : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+  }, "Shop Now")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     id: "submit",
     className: "btn btn-lg btn-primary rounded-pill",
     disabled: props.processingStat || isDisabled || iSsucceeded,
     onClick: props.handleSubmit
-  }, "Pay"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+  }, "Pay")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "d-flex justify-content-center align-items-center text-muted mt-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", {
     className: "bi bi-shield-lock fs-6 me-1"

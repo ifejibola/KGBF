@@ -6,12 +6,15 @@ import { sql } from '../../Model/db';
 // let stripe = Stripe(config.stripTestKey);
 let stripe = Stripe(config.stripeSecretKey);
 
-const calculateOrderAmount = items => {
+let calculateOrderAmount = items => {
     console.log('clac order amoutn :', items.checkoutDetails.total)
+
+    let total = items.checkoutDetails.total;
     // Replace this constant with a calculation of the order's amount
     // Calculate the order total on the server to prevent
     // people from directly manipulating the amount on the client
-    return 1400;
+    return total * 100;
+    // return 1400;
     // return items.checkoutDetails.total;
 
 };
@@ -24,11 +27,24 @@ const PaymentIntent = async function (req, res) {
     // const { items } = req.body;
     const items = req.body;
     console.log(req.body);
-
+    // 4242 4242 4242 4242
     console.log('payment item detail: ', items)
     const paymentIntent = await stripe.paymentIntents.create({
+        // amount: 99,
+        // amount: 99,
         amount: calculateOrderAmount(items),
+        // amount: items.checkoutDetails.total,
         currency: "usd",
+        // payment_method_types: [
+        //     "giropay",
+        //     "eps",
+        //     "p24",
+        //     "sofort",
+        //     "sepa_debit",
+        //     "card",
+        //     "bancontact",
+        //     "ideal",
+        // ],
         // charges: {
         //     object: "list",
         //     data: items,
